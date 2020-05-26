@@ -1,0 +1,12 @@
+{%extends 'layout.htm'%}
+
+{% block body %}
+
+{% for article in articles%}
+
+<li class="list-group-item"><a href="/Articles/{{article.id}}">{{article.id}}</a></li>
+
+{%endfor%}
+
+
+{%endblock%}
