@@ -1,0 +1,115 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "How are you","hey","Is anyone there?","hi tim", "Hello", "Good day", "Whats up"],
+     "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+     "context_set": ""
+    },
+    {"tag": "meeting",
+     "patterns": ["nice to meet you", "glad to be your friend" ],
+     "responses": ["That's kind from your part !", "nice to meet you too ! ^_^ ", "Tim is happy to hear that from you "],
+     "context_set": ""
+    },
+    {"tag": "goodbye",
+     "patterns": ["cya", "See you later", "Goodbye","bye","I am Leaving", "Have a Good day"],
+     "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+     "context_set": ""
+    },
+    {"tag": "age",
+     "patterns": ["how old", "how old is tim", "what is your age", "how old are you", "age?"],
+     "responses": ["I am 18 years old!", "18 years young!"],
+     "context_set": ""
+    },
+    {"tag": "name",
+     "patterns": ["what is your name", "what should I call you", "whats your name?","who are you"],
+     "responses": ["You can call me Tim.", "I'm Tim!", "I'm Tim your assistant through your visit here"],
+     "context_set": ""
+    },
+    {"tag": "shop",
+     "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
+     "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
+     "context_set": ""
+    },
+    {"tag": "hours",
+     "patterns": ["when are you guys open", "what are your hours", "hours of operation","when do you open ?"
+        ,"what are your timing?","timing","when are your services available?"],
+     "responses": ["We are open 7am-4pm Monday-Friday!"],
+     "context_set": ""
+    },
+    {"tag": "place",
+        "patterns": ["where ", "where is the company headquarter ?","where is the company situated?" ,"headquarter","where is 1C company"],
+        "responses": ["1C company headquarters are located in Moscow,Russia"],
+        "context_set": ""
+    },
+    {"tag": "contact",
+        "patterns": ["contact?","can i get the company address ?","how can i contact the company ?"],
+        "responses": ["you can find 1C company at these addresses: ||Sales: ul. Seleznevskaya 21 ||box 64, 123056 Moscow ||tel.: (+7 495) 2584408 - 7379257 ||fax: (+7 495) 6814407 "],
+        "context_set": ""
+    },
+    {"tag": "information",
+        "patterns": ["1C company ?","what is 1C company ?","informations about 1C company?","i want to know about 1C company"],
+        "responses": ["1C Company ( Фирма '1С' in Russian ) is one of the largest video game development, publishing and distribution studios in Russia,founded in Moscow by Boris Nuraliev in 1991. 1C offers easy-to-use software to companies that do not wish to invest in development.At present, 8000 dealers from 600 cities cooperate with 1C.For more informations, PLease visit our official website : https://1c.ru/eng/title.htm"],
+        "context_set": ""
+    },
+    {"tag": "services",
+        "patterns": ["what are 1C company services ?","services ?","1C company services ?"],
+        "responses": ["1C offered services : 1) Enterprise 8 :  Enterprise 8 is a platform for management software development. The platform is a market leader in Russia. The complete suite includes accounting, contact management, stocks, documents, web client and more.You can check this platform here : https://v8.1c.ru .   2) BUSINESS SOFTWARE DEVELOPMENT, SUPPORT AND DISTRIBUTION : 1C delivers flexible , modern and scalable Enterprise system of business automation products.These services are supported by Enterprise 8 platform.  3) EDUCATION AND ENTERTAINMENT SOFTWARE: Educational software developed by 1C includes a series of 1C:Tutor software representing school education lessons of mathematics, the Russian language, physics, chemistry, biology, etc. About entertainment:1 C has released key titles developed by major Russian studios, including Hard Truck and Hard Truck 2 by SoftLab-NSK, Blitzkrieg 1-2, Silent Storm and Heroes of Might and Magic 5 by Nival Interactive and more.."],
+        "context_set": ""
+    },
+    {"tag": "games",
+        "patterns": ["what are the developed games by 1C?","developed games?"],
+        "responses": ["The division of video games from the 1C Company specializes mainly in the combat flight simulation of WWII . Games series developed by 1C company can be classified into 2 groups : ||1C Maddox Games|| : *IL-2 Sturmovik (2001) *IL-2 Sturmovik: Forgotten Battles (2003) *Pacific Fighters (2004) *IL-2: 1946 (2006) *Theater of War (2007) *IL-2 Sturmovik: Cliffs of Dover (2011)  ||1C Game Studios|| *IL-2 Sturmovik: Great Battles , check the official website of 1C games products to get updated and buy the 1C newest games releases : www.1cpublishing.eu"],
+        "context_set": ""
+    },
+    {"tag": "help",
+        "patterns": ["help","i want you help me deciding what i buy","help me buying","help me purchasing","what should i purchase ?", "can you recommend me buying a product ?", "any recommendations ?"],
+        "responses": ["Sure my friend! , first of all what type of 1C products you want , Games or general software services ?","ready to help ! ,first of all what type of 1C products you want , Games or general software services ?"],
+        "context_set": ""
+    },
+    {"tag": "games_choice",
+        "patterns": ["games","want games","prefer games","like games","want games"],
+        "responses": ["I love games too !, now what type of games you prefer ? , 1 : Action , 2: Adventure, 3:Strategy"],
+        "context_set": ""
+    },
+    {"tag": "Action",
+        "patterns": ["1","action","prefer action","love action","want action"],
+        "responses": ["Good choice my friend !, here's my newest best games , i am sure you would like them (look between parentheses for more informations about the game or if you want to buy it),enjoy! :        *BLACKHOLE ( https://www.1cpublishing.eu/game/697-blackhole ) ,     *SHINY (https://www.1cpublishing.eu/game/705-shiny ) , *THE WATCHMAKER (https://www.1cpublishing.eu/game/704-the-watchmaker )  "],
+        "context_set": ""
+    },
+    {"tag": "Adventure",
+        "patterns": ["2","adventure","prefer adventure","love adventure","want adventure"],
+        "responses": ["That's my best choice also ! ,here's my newest best games , i am sure you would like them (look between parentheses for more informations about the game or if you want to buy it), Good luck for your adventure ! :                    *FALL OF THE NEW AGE (https://www.1cpublishing.eu/game/691-fall-of-the-new-age), *MYSTERY CASTLE: THE MIRROR'S SECRET (https://www.1cpublishing.eu/game/692-mystery-castle-the-mirror-s-secret), *RENOIR (https://www.1cpublishing.eu/game/708-renoir) "],
+        "context_set": ""
+    },
+    {"tag": "Strategy",
+        "patterns": ["3","strategy","prefer strategy","love strategy","want adventure"],
+        "responses": ["What a great choice ! ,here's my newest best games , i am sure you would like them (look between parentheses for more informations about the game or if you want to buy it),enjoy! :                 *ANCESTORS LEGACY (https://www.1cpublishing.eu/game/716-ancestors-legacy),               *COMPANY OF CRIME (https://www.1cpublishing.eu/game/748-company-of-crime), *ELVEN LEGACY: RANGER (https://www.1cpublishing.eu/game/642-elven-legacy-ranger)"],
+        "context_set": ""
+    },
+    {"tag": "software_choice",
+        "patterns": ["general software services","i prefer general software services","software services"],
+        "responses": ["allright! , what type of the following fields you prefer ? : Educational,Computer science world or Audiobooks ? "],
+        "context_set": ""
+    },
+    {"tag": "audiobooks",
+        "patterns": ["audiobooks,i prefer audiobooks !"],
+        "responses": ["Good ! , here's a list of beautifull audiobooks i really recommend,enjoy! : *Guide. Florence , *Examiner , *Romanov P.S. Arabian fairy tale"],
+        "context_set": ""
+    },
+    {"tag": "computer science",
+        "patterns": ["computer science world ,computer science, i prefer computer science world"],
+        "responses": ["Perfect , here's a good bunch of what i found :                   *TeachPro 3ds max 6                                *TeachPro Computer Graphics and Design on DVD,               *Keyboard solo"],
+        "context_set": ""
+    },
+    {"tag": "educational",
+        "patterns": ["educational","i prefer educational","i want educational"],
+        "responses": ["umm.. let's see what i can offer you, look at this good series ! :                    *School of literacy. Intensive Russian language course [PC, Digital Version] , *School of literacy. Handbook for primary school students [PC, Digital Version], *English today. English crosswords, idioms and phrases. Verbs"],
+        "context_set": ""
+    },
+    {"tag": "thanks",
+        "patterns": ["thanks","thankyou very much"],
+        "responses": ["That's my job my friend !","Glad to see you satisfied"],
+        "context_set": ""
+    }
+
+]
+}

@@ -1,5 +1,6 @@
 from flask import Flask,render_template,request,flash,redirect,url_for,session,logging
 
+from flask_socketio import SocketIO,send
 
 
 from flask_mysqldb import MySQL
@@ -9,8 +10,28 @@ from functools import wraps
 
 import pickle , numpy as np
 
+from chatbot.chatbot import answer
+
 
 app = Flask(__name__)
+
+
+
+#socket configuration
+
+socketio = SocketIO(app,cors_allowed_origins="*")   
+@socketio.on('message')
+def handleMessage(msg):
+    #print(answer(msg))
+    #print('Message : ' , msg)
+    send("You",broadcast=True)
+    send(msg,broadcast=True)
+    send("Tim",broadcast=True)
+    send(answer(msg),broadcast=True)
+
+
+#load models
+
 model1 = pickle.load(open('model1.pkl', 'rb'))
 model2 = pickle.load(open('model2.pkl', 'rb'))
 
@@ -113,24 +134,27 @@ def register():
         username= form.username.data
         password = sha256_crypt.encrypt(str(form.password.data))
       
-        #create cursor
+        if "@eniso.u-sousse.tn" in email:
 
-        cur =mysql.connection.cursor()
+            #create cursor
+            cur =mysql.connection.cursor()
 
-        # execute SQL command
-
-        cur.execute("INSERT INTO users(name,email,username,password) VALUES (%s,%s,%s,%s)",(name,email,username,password) )
-    
-        #commit to DB 
-
-        mysql.connection.commit()
+            # execute SQL command
+            cur.execute("INSERT INTO users(name,email,username,password) VALUES (%s,%s,%s,%s)",(name,email,username,password) )
+        
+            #commit to DB 
+            mysql.connection.commit()
 
 
-        #close connection
+            #close connection
+            cur.close()
+            flash("registrated successfuly" , "success") #first field :message, second:category
+            return redirect(url_for('login'))
+        else:
+            flash("Not registered , Please provide a valid enterprise email" , "danger")
+            return redirect(url_for('register'))
 
-        cur.close()
-        flash("registrated successfuly" , "success") #first field :message, second:category
-        return redirect(url_for('login'))
+        
 
     return render_template('register.htm',form=form)
 
@@ -187,6 +211,7 @@ def logout():
 @app.route('/forecast',methods=['GET','POST'])
 @required_login
 def forecast():
+    session['test']=False      # to show message only when post method is done 
     if request.method == 'POST' : 
 
         int_features = [int(x) for x in request.form.values()]
@@ -216,4 +241,7 @@ def forecast():
 
 if __name__ =='__main__':
     app.secret_key='secret123'
-    app.run(debug=True)
+    socketio.run(app,debug=True) 
+
+
+    
