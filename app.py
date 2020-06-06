@@ -15,7 +15,6 @@ app = Flask(__name__)
 model1 = pickle.load(open('/home/mohamed/BusinessForcaster/xgb_test.pickle', 'rb'))
 
 
-
 #config MySQL
 
 app.config['MYSQL_HOST'] ='localhost'
