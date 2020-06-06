@@ -2,6 +2,7 @@ from flask import Flask,render_template,request,flash,redirect,url_for,session,l
 
 
 
+
 from flask_mysqldb import MySQL
 from wtforms import Form,StringField,TextAreaField,PasswordField,validators
 from passlib.hash import sha256_crypt
@@ -11,8 +12,8 @@ import pickle , numpy as np
 
 
 app = Flask(__name__)
-model1 = pickle.load(open('model1.pkl', 'rb'))
-model2 = pickle.load(open('model2.pkl', 'rb'))
+model1 = pickle.load(open('/home/mohamed/BusinessForcaster/xgb_test.pickle', 'rb'))
+
 
 
 #config MySQL
@@ -196,13 +197,13 @@ def forecast():
         
         final_features = [np.array(int_features)]
         
-        item_price = model1.predict(final_features)
+        item_price = model.predict(final_features)
         
            
-        int_features.append(item_price[0]) #adding item price to features
+        #int_features.append(item_price[0]) #adding item price to features
        
         final_features = [np.array(int_features)]
-        preds = model2.predict(final_features)
+        preds = model.predict(final_features)
         
         output = round(preds[0],2)
         session['test']=True          # to show message only when post method is done 
