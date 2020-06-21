@@ -3,6 +3,7 @@ from flask import Flask,render_template,request,flash,redirect,url_for,session,l
 from flask_socketio import SocketIO,send
 
 
+
 from flask_mysqldb import MySQL
 from wtforms import Form,StringField,TextAreaField,PasswordField,validators
 from passlib.hash import sha256_crypt
@@ -32,9 +33,10 @@ def handleMessage(msg):
 
 #load models
 
+#model= pickle.load(open('model.pkl', 'rb'))
+
 model1 = pickle.load(open('model1.pkl', 'rb'))
 model2 = pickle.load(open('model2.pkl', 'rb'))
-
 
 #config MySQL
 

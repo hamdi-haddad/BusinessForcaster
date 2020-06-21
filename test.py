@@ -1,4 +1,3 @@
-ch = "hamd"
+import pandas as pd
 
-if "ha" in ch :
-    print("ok")
+a = pd.read_csv("./data/test.csv")

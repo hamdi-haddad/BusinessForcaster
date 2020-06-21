@@ -86,7 +86,6 @@ model = tflearn.DNN(net) #DNN :deep neural network
 try:       #load the model if it exists
     model.load("model.tflearn")
 except:
-
     model.fit(training,output, n_epoch=1200,batch_size=8,show_metric=True)  # n_epoch : how much model sees data
     model.save("model.tflearn")
 
