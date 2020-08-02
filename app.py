@@ -13,6 +13,7 @@ import pickle , numpy as np
 
 from chatbot.chatbot import answer
 
+import pandas as pd 
 
 app = Flask(__name__)
 

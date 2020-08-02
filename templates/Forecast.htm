@@ -3,11 +3,47 @@
 
 {%block body%}
 
+<style>
+  body {
+   background-image: url('../static/img/fro.jpeg') ;
+   height: 100%;
+ 
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ 
+  }
+  label{
+    color: black;}
+  p {
+   margin-left: 480px;
+   margin-top: 40px;
+    }
+  h1{
+     color: brown;
+  }
+  h4{
+   color:black;
+   margin-left: 300px;
+   margin-top: 150px;
+
+  }
+
+
+
+ </style>
+
+
+
+
+
+
+
 <h1>Welcome {{session.username}} <h3>Enter your product infos below</h3></h1>
 
 
-<hr>
-<div style="margin-top: 40px;"></div>
+<div style="margin-top: 70px;"></div>
 
 
 
@@ -17,24 +53,27 @@
     <label>Shop ID</label>
     <input type="text" name="shopid" class="form-control" value={{request.form.shopid}}>
   </div>
+  <br>
   <div class="form-group">
      <label>Item ID</label>
      <input type="text" name="itemid" class="form-control" value={{request.form.itemid}}>
    </div>
   
  
- <p><input type="submit" class="btn btn-primary" value="Forecast"></p>
+ <p><input type="submit" class="btn btn-dark" value="Forecast"></p>
  
  </form>
 
-<hr>
 <div style="margin-top: 20px;"></div>
 
 {% if (session.test==True)  %}
 
-<h3><small>Your Item ID : {{request.form.itemid}} should be sold on average <strong class="text-primary"> {{output}} </strong> times a month later </small></h3>
+<h4>Your Item ID : {{request.form.itemid}} should be sold on average <strong class="text-primary"> {{output}} </strong> times a month later </h4>
 
 {%endif%}
+
+
+<div style="margin-top: 100px;"></div>
 
 
 {%endblock%}

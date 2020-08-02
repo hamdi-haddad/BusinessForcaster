@@ -25,7 +25,7 @@
     height: 45px;
     right: 15px;
     bottom:20px;
-    background-color: #8a57cf;
+    background-color: #e9e643;
     color: #fff;
     border-radius: 50%;
     text-align: center;
@@ -269,7 +269,7 @@
     flex-shrink: 0;
     padding-top: 17px;
     padding-bottom: 15px;
-    color: #96aab4;
+    color: #eee237;
     background-color: #fff;
     border-top: 1px solid #e6ebea;
 }

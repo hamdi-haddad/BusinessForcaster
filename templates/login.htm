@@ -4,7 +4,40 @@
 
 {% block body %}
 
-<h1>Login</h1>
+<style>
+ body {
+  background-image: url('../static/img/1463.jpg') ;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+ }
+ h1,label{
+   color: aliceblue;}
+ p {
+  margin-left: 480px;
+  margin-top: 50px;
+   }
+ 
+</style>
+
+
+
+
+
+
+
+
+<h1>Welcome | Login</h1>
+<br>
+<br>
+<br>
+
+
+
 
 <form method="POST">
 
@@ -19,11 +52,11 @@
  
 
 
-<p> <input type="submit" class="btn btn-primary" value="submit"></p>
+<p> <input type="submit" class="btn btn-dark" value="submit"></p>
 
 
 
 </form>
 
 
-{% endblock %}
+{%endblock%}

@@ -5,31 +5,67 @@
 {% from '/includes/_formhelpers.htm' import render_field %}
 
 
-<h1>Register</h1>
+<style>
+   body {
+    background-image: url('../static/img/1463.jpg') ;
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+   }
+   label{
+     color: aliceblue;}
+   p {
+    margin-left: 460px;
+    margin-top: 10px;
+     }
+   h1{
+      color:aliceblue;
+   }
+   span {
+      color: brown;
+   }
 
+
+
+  </style>
+  
+
+
+
+
+
+
+
+
+<h1> New Employee ?  <span >Register</span></h1>
+<br>
 <form method="POST">
 
   <div class="form-group">
      {{render_field (form.name,class_="form-control") }}
   </div>
- 
+ <br>
   <div class="form-group">
     {{render_field (form.email,class_="form-control") }}
  </div>
-
+ <br>
  <div class="form-group">
     {{render_field (form.username,class_="form-control") }}
  </div>
-
+ <br>
  <div class="form-group">
     {{render_field (form.password,class_="form-control") }}
  </div>
-
+ <br>
  <div class="form-group">
     {{render_field (form.confirm,class_="form-control") }}
  </div>
-
-<p> <input type="submit" class="btn btn-primary" value="submit"></p>
+ <br>
+<p> <input type="submit" class="btn btn-dark" value="submit"></p>
 
 
 
